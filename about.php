@@ -9,7 +9,7 @@
     <section class="about-mv">
         <div class="wrapper">
             <div class="heading-section center about-heading full-wid">
-            <h2 class="heading">TechCore is an innovative approach</h2>
+            <h2 class="heading">Living Luxe is an innovative approach</h2>
             <span class="sub-heading">Strategy for the building of websites. Technique of carrying out business</span>
         </div>
             <ul class="full-wid mv-inner">
@@ -47,7 +47,7 @@
         <div class="wrapper">
             <div class="aboutus-inner">
                 <div class="heading-section">
-                    <h2 class="heading">The Use of Technology Is Increasing Our Company's Success Rates.</h2>
+                    <h2 class="heading">Living Luxe Benefit</h2>
                 </div>
                 <p>At LivingLuxe, we are dedicated to helping individuals and families find their perfect home, while also providing investors and businesses
                      with top-tier real estate opportunities. With a focus on quality, transparency, and customer satisfaction, our property listing 
