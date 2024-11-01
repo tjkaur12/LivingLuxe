@@ -134,7 +134,7 @@ footer, header, main, nav, section
     justify-content: space-between;
     align-items: center;
 }
-/******Welcome CSS*****/
+
 .welcome
 {
 	background-image:url("../images/banner.jpg");
@@ -225,7 +225,7 @@ h2.heading
     box-shadow: 0 0 5px 0 #ddd;
     padding: 30px;
 }
-/********Services CSS**********/
+
 .services
 {
     background-image: url("../images/services-bg.jpg");
@@ -273,12 +273,8 @@ h2.heading
     width: 100%;
 }
 .services .ser_items .ser_item .icon {
-    /* border: 3px solid #f8b600; */
     display: inline-block;
     border-radius: 100%;
-    /* width: 100px; */
-    /* height: 100px; */
-    /* box-shadow: 0 0 10px 2px #f8b600; */
     text-align: center;
     margin-bottom: 20px;
 }
@@ -348,7 +344,6 @@ span.sub-heading
     display: flex;
     align-items: center;
 }
-/*******why choose CSS*******/
 .why-chooseus
 {
 	background-color:#2a3741;
@@ -492,7 +487,7 @@ span.sub-heading
 {
     padding: 10px;
 }
-/*******Blog CSS******/
+
 .blogs
 {
 	background-image: url("../images/blog-bg.jpg");
@@ -584,7 +579,7 @@ span.sub-heading
     padding: 10px 16px;
     border-radius: 22px;
 }
-/*********team css******/
+
 .teams .team-member-wrap .team-image 
 {
     padding: 9px 50px 10px;
@@ -623,7 +618,7 @@ section.teams {
     background-color: #ffffff;
     padding: 60px 0;
 }
-/********Footer CSS********/
+
 footer .footer-inner 
 {
     display: grid;
@@ -667,7 +662,7 @@ footer .social-icons li a
     color: #ffffff;
     border-top: 1px solid #16191e;
 }
-/**********about*********/
+
 .inner-page-header
 {
 	background-color:#4e888f;
@@ -974,6 +969,19 @@ table td,table th
     height: 100%;
     object-fit: cover;
 }
+section.success {
+    box-shadow: 0 0 10px 0 #ddd;
+    padding: 30px;
+    max-width: 600px;
+    margin: 50px auto;
+    text-align: center;
+}
+.order-summary h1
+{
+    font-size: 30px;
+    font-weight: bold;
+    color:#4e888f;
+}
 .login-form {
     background-color: #ffffff;
     border: 1px solid #7bcee4;
@@ -982,7 +990,7 @@ table td,table th
 #add-to-cart-form label, .form-field {
     width: auto;
 }
-input[type="text"], input[type="email"], input[type="password"], input[type="number"], input[type="file"], textarea, select {
+input[type="text"], input[type="email"], input[type="password"], input[type="number"], input[type="file"],input[type="tel"], textarea, select {
     width: 100%;
     border: 1px solid #aaa;
     padding: 14px;
@@ -1200,7 +1208,350 @@ input[type="text"], input[type="email"], input[type="password"], input[type="num
 
 
 
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+}
+.slide {
+    display: none;
+}
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+.search-form {
+    display: flex;
+    align-items: center;
+}
 
-/* Property Listing Cards */
+.search-form input[type="text"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 5px; /* Space between input and button */
+    margin-bottom: 0;
+}
+header .search-form input[type="text"]
+{
+    padding: 5px !important;
+}
+#cart-items {
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 5px 0 #ddd;
+}
+.property-item {
+    border: 1px solid #ddd;
+    max-width: 400px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+.property-image-gallery {
+    width: 60%;
+}
+.filter-inner form {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.filter-inner form select
+{
+    margin-bottom: 0;
+}
+.search-form .search-btn {
+    background-color: #4e888f;
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 4px;
+    margin-top: 0;
+    color: #fff;
+}
 
+.search-form .search-btn i {
+    color: #fff; 
+}
 
+.search-form input[type="text"]:focus {
+    outline: none;
+    border-color: #007bff; /* Change to highlight color */
+}
+
+.cart-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    position: relative;
+}
+
+.item-count {
+    position: absolute;
+    top: -1px;
+    right: 0px;
+    background: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+    height: 18px;
+    width: 18px;
+    text-align: center;
+    font-weight: 700;
+    padding: 0px;
+}
+.wrapper .search-form input[type="text"]
+{
+    padding: 17px;
+}
+.wrapper button
+{
+    margin-top: 0;
+}
+/* Cart Items Section */
+#cart-items {
+    margin-bottom: 30px;
+    width: 100%;
+    float: left;
+    margin-top: 50px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.cart-item-title {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.cart-item-price,
+.cart-item-total {
+    font-size: 16px;
+    color: #555;
+}
+
+.quantity-selector {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.quantity-selector button {
+    background-color: #4e888f;
+    border: 1px solid #ccc;
+    padding: 2px 7px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.quantity-selector .increment,
+.quantity-selector .decrement {
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.remove-btn {
+    background-color: #ff4d4d;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.remove-btn:hover {
+    background-color: #e60000;
+}
+
+/* Grand Total Section */
+#grand-total {
+    text-align: right;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+#checkout-btn {
+    display: block;
+    width: 100%;
+    background-color: #2a3741;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+    max-width: 258px;
+    float: right;
+    margin-bottom: 40px;
+}
+
+#checkout-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Success Message */
+.message {
+    background-color: #e6ffe6;
+    color: #339933;
+    padding: 10px;
+    border-left: 4px solid #33cc33;
+    margin-bottom: 20px;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 600px) {
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .quantity-selector {
+        margin-top: 10px;
+    }
+
+    #checkout-btn {
+        font-size: 14px;
+    }
+}
+
+/* Checkout Success Section */
+.checkout-success {
+    text-align: center;
+}
+
+.checkout-success h2 {
+    font-size: 2em;
+    color: #4CAF50; /* Green */
+    margin-bottom: 10px;
+}
+
+.checkout-success p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* Order Summary */
+.order-summary {
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.order-summary h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.order-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.order-item h4 {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.order-item p {
+    margin: 0;
+}
+
+/* Grand Total */
+.order-summary h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin-top: 15px;
+}
+
+/* Billing and Shipping Details */
+h3 {
+    color: #333;
+}
+
+.billing-details, .shipping-details {
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+.billing-details p, .shipping-details p {
+    margin: 5px 0;
+}
+
+/* Buttons */
+button {
+    padding: 10px 15px;
+    margin-top: 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #4CAF50; /* Green */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049; /* Darker green */
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .order-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    button {
+        width: 100%;
+    }
+}

@@ -34,31 +34,98 @@ CREATE TABLE inquiries (
 );
 
 -- Insert demo property 1
-INSERT INTO properties (title, description, price, image) VALUES
+INSERT INTO properties (title, description, price, address, image, bedrooms, bathrooms, size) VALUES
 ('Luxury Villa in Beverly Hills', 
-'This stunning luxury villa offers 5 bedrooms, 4 bathrooms, a private pool, and breathtaking views of the city. Located in one of the most prestigious areas in Beverly Hills.',
-1250000.00, 'villa1.webp');
+ 'This stunning luxury villa offers 5 bedrooms, 4 bathrooms, a private pool, and breathtaking views of the city. Located in one of the most prestigious areas in Beverly Hills.',
+ 1250000.00, '123 Beverly Hills Dr, Beverly Hills, CA, USA', 'villa1.webp', 5, 4, 4500);
 
 -- Insert demo property 2
-INSERT INTO properties (title, description, price, image) VALUES
+INSERT INTO properties (title, description, price, address, image, bedrooms, bathrooms, size) VALUES
 ('Modern Apartment in New York', 
-'Beautiful 2-bedroom apartment in the heart of Manhattan. Fully furnished, modern kitchen, and just steps away from Central Park and public transportation.',
-850000.00, 'apartment1.webp');
+ 'Beautiful 2-bedroom apartment in the heart of Manhattan. Fully furnished, modern kitchen, and just steps away from Central Park and public transportation.',
+ 850000.00, '456 Central Park West, New York, NY, USA', 'apartment1.webp', 2, 1, 1200);
 
 -- Insert demo property 3
-INSERT INTO properties (title, description, price, image) VALUES
+INSERT INTO properties (title, description, price, address, image, bedrooms, bathrooms, size) VALUES
 ('Cozy Cottage in the Countryside', 
-'A charming 3-bedroom cottage nestled in the countryside. Perfect for a quiet retreat, with a large garden and a cozy fireplace.',
-450000.00, 'cottage1.webp');
+ 'A charming 3-bedroom cottage nestled in the countryside. Perfect for a quiet retreat, with a large garden and a cozy fireplace.',
+ 450000.00, '789 Country Lane, Countryside, UK', 'cottage1.webp', 3, 2, 1800);
 
 -- Insert demo property 4
-INSERT INTO properties (title, description, price, image) VALUES
+INSERT INTO properties (title, description, price, address, image, bedrooms, bathrooms, size) VALUES
 ('Beachfront Condo in Miami', 
-'Wake up to stunning ocean views in this 2-bedroom beachfront condo in Miami. Enjoy direct beach access, modern amenities, and a large balcony.',
-950000.00, 'condo1.jpeg');
+ 'Wake up to stunning ocean views in this 2-bedroom beachfront condo in Miami. Enjoy direct beach access, modern amenities, and a large balcony.',
+ 950000.00, '101 Ocean Drive, Miami, FL, USA', 'condo1.jpeg', 2, 2, 1500);
 
 -- Insert demo property 5
-INSERT INTO properties (title, description, price, image) VALUES
+INSERT INTO properties (title, description, price, address, image, bedrooms, bathrooms, size) VALUES
 ('Historic Townhouse in London', 
-'A beautiful 4-bedroom townhouse in the heart of London, featuring historic architecture, a private garden, and modern interior upgrades.',
-1350000.00, 'townhouse1.jpeg');
+ 'A beautiful 4-bedroom townhouse in the heart of London, featuring historic architecture, a private garden, and modern interior upgrades.',
+ 1350000.00, '202 Heritage St, London, UK', 'townhouse1.jpeg', 4, 3, 3200);
+
+
+CREATE TABLE contact_form_submissions (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    phone VARCHAR(15),
+    website VARCHAR(255),
+    message TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+ALTER TABLE properties 
+    ADD bedrooms INT,
+    ADD bathrooms INT,
+    ADD size INT;
+
+CREATE TABLE property_images (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    property_id INT,
+    image VARCHAR(255),
+    FOREIGN KEY (property_id) REFERENCES properties(id)
+);
+
+CREATE TABLE `property_images` (
+    `id` int(11) NOT NULL AUTO_INCREMENT,
+    `property_id` int(11) NOT NULL,
+    `image_path` varchar(255) NOT NULL,
+    PRIMARY KEY (`id`),
+    FOREIGN KEY (`property_id`) REFERENCES `properties`(`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+INSERT INTO `property_images` (`property_id`, `image_path`) VALUES
+-- Images for Property ID 6
+(6, 'P1G1.avif'),
+(6, 'P1G2.avif'),
+(6, 'P1G3.avif'),
+(6, 'P1G4.avif'),
+(6, 'P1G5.avif'),
+
+-- Images for Property ID 7
+(7, 'P2G1.avif'),
+(7, 'P2G2.avif'),
+(7, 'P2G3.avif'),
+(7, 'P2G4.avif'),
+(7, 'P2G5.avif'),
+
+-- Images for Property ID 8
+(8, 'P3G1.avif'),
+(8, 'P3G2.avif'),
+(8, 'P3G3.avif'),
+(8, 'P3G4.avif'),
+(8, 'P3G5.avif'),
+
+-- Images for Property ID 9
+(9, 'P4G1.avif'),
+(9, 'P4G2.avif'),
+(9, 'P4G3.avif'),
+(9, 'P4G4.avif'),
+(9, 'P4G5.avif'),
+
+-- Images for Property ID 10
+(10, 'P5G1.avif'),
+(10, 'P5G2.avif'),
+(10, 'P5G3.avif'),
+(10, 'P5G4.avif'),
+(10, 'P5G5.avif');

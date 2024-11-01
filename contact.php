@@ -44,7 +44,7 @@
                 <div class="contact-form">
                     <span>Get In Touch</span>
                     <h2>Fill The Form Below</h2>
-                    <form id="contact-form" action="#">
+                    <form id="contact-form" action="submit_contact.php" method="POST">
                         <div class="form-field">
                             <input type="text" id="name" name="name" placeholder="Name">
                             <input type="email" id="email" name="email" placeholder="Email">

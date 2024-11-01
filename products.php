@@ -45,9 +45,9 @@
                             </div>
                         </div>
                 <?php  
-                    } // End of while loop
+                    }
                 } else { 
-                    // If no properties found, show message
+                   
                     echo "<p>No properties found.</p>";
                 }
                 ?>

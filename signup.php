@@ -6,10 +6,10 @@
         <div class="wrapper">
             <div class="login-inner">
                 <div class="login-form">
-                <h1>Create an Account</h1>
+                    <h1>Create an Account</h1>
                     <form id="signupForm" action="signup.php" method="post">
                         <div class="form-field">
-                            <label for="password">Username:</label>
+                            <label for="username">Username:</label>
                             <input type="text" name="username" placeholder="Username" required><br>
                         </div>
                         <div class="form-field">
@@ -19,6 +19,10 @@
                         <div class="form-field">
                             <label for="password">Password:</label>
                             <input type="password" id="password" name="password" placeholder="Password" required><br>
+                        </div>
+                        <div class="form-field">
+                            <label for="confirm_password">Confirm Password:</label>
+                            <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm Password" required><br>
                         </div>
                         
                         <button type="submit" class="btn">Sign Up</button>
