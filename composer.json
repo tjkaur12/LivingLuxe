@@ -1,0 +1,10 @@
+{
+    "name": "livingluxe/capstone",
+    "description": "Capstone project for LivingLuxe",
+    "version": "1.0.0",
+    "require": {
+        "php": ">=7.4",
+        "kreait/firebase-php": "^5.26",
+        "stripe/stripe-php": "^16.3"
+    }
+}

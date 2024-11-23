@@ -24,16 +24,8 @@ $stmt->execute();
 $result = $stmt->get_result();
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Panel - Properties Management</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="container">
+<?php include 'admin-header.php'; ?>
+    <div class="wrapper">
         <h1>Properties Management</h1>
         <a href="add_property.php" class="add-property-btn">Add New Property</a>
 
@@ -69,5 +61,4 @@ $result = $stmt->get_result();
             </tbody>
         </table>
     </div>
-</body>
-</html>
+<?php include 'admin-footer.php'; ?>

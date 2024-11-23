@@ -947,24 +947,24 @@ table td,table th
 {
 	padding:20px;
 }
-.login-outer .wrapper
+.login-outer .wrapper,.reset-password-outer .wrapper
 {
     max-width: 800px !important;
     margin-top: 50px;
     margin-bottom: 50px;
 }
-.admin-login .login-inner {
+.admin-login .login-inner,.reset-password-inner {
     display: flex;
     align-items: stretch;
     justify-content: center;
 }
-.login-inner {
+.login-inner,.reset-password-inner {
     display: grid;
     grid-template-columns: 60% 40%;
     justify-content: center;
     align-content: center;
 }
-.login-inner img {
+.login-inner img,.reset-password-inner img {
     max-width: 100%;    
     height: 100%;
     object-fit: cover;
@@ -982,7 +982,7 @@ section.success {
     font-weight: bold;
     color:#4e888f;
 }
-.login-form {
+.login-form,.reset-password-form {
     background-color: #ffffff;
     border: 1px solid #7bcee4;
     padding: 30px;
@@ -1440,8 +1440,14 @@ header .search-form input[type="text"]
     font-size: 14px;
     border-radius: 4px;
 }
-
-/* Media Query for Smaller Screens */
+p.forgot-pass {
+    display: block;
+    float: right;
+    width: 100%;
+    margin: 0;
+    text-align: left;
+    
+}
 @media (max-width: 600px) {
     .cart-item {
         flex-direction: column;
@@ -1541,9 +1547,148 @@ button {
 }
 
 button:hover {
-    background-color: #45a049; /* Darker green */
+    background-color: #4e888f; /* Darker green */
+}
+.faq-page {
+    padding: 20px 15px;
+    background-color: #f9f9f9;
 }
 
+.faq-section {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+}
+.faq-page-inner {
+    max-width: 900px;
+    margin: 50px auto;
+    box-shadow: 0 0 7px 0 #898989;
+    padding: 30px;
+    text-align: center;
+}
+.faq-question {
+    background-color: #2a3741;
+    color: #fff;
+    border: none;
+    width: 100%;
+    padding: 15px;
+    text-align: left;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.faq-question:focus {
+    outline: none;
+}
+
+.faq-answer {
+    display: none;
+    padding: 15px;
+    background-color: #f1f1f1;
+    font-size: 14px;
+}
+
+.faq-question.active + .faq-answer {
+    display: block;
+}
+/* News and Events Page Styles */
+.news-events-page {
+    padding: 20px 15px;
+    background-color: #f9f9f9;
+}
+
+.news-section, .events-section {
+    margin-bottom: 40px;
+}
+
+.news-list, .events-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.news-item, .event-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    flex: 1 1 calc(30% - 20px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.news-item img, .event-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.news-content, .event-content {
+    padding: 15px;
+}
+
+.news-content h3, .event-content h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    color: #007bff;
+}
+
+.news-content p, .event-content p {
+    margin: 0 0 15px;
+    font-size: 14px;
+    color: #333;
+}
+
+
+.view-all-btn {
+    margin-top: 20px;
+    display: inline-block;
+    font-weight: bold;
+}
+.feedback-page {
+    padding: 20px 15px;
+    background-color: #f9f9f9;
+}
+
+.feedback-page h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-field {
+    margin-bottom: 15px;
+}
+.cart-item-details img {
+    max-width: 400px;
+}
+.form-field label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-field input, .form-field textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.form-field textarea {
+    resize: none;
+}
+.f-p
+{
+    text-align: center;
+}
 /* Responsive Styles */
 @media (max-width: 600px) {
     .order-item {

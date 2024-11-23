@@ -53,8 +53,9 @@
                             <li><a href="logout.php">Logout</a></li>
                         <?php else: ?>
                             <li><a href="signin.php">Sign In</a></li>
-                            <li><a href="signup.php">Sign Up</a></li>
                         <?php endif; ?>
+                        <li><a href="admin/index.php">Admin</a></li>
+                        <li><a href="agent_list.php">Agent List</a></li>
                         <li>
                             <form action="search.php" method="GET" class="search-form">
                                 <input type="text" name="keywords" placeholder="Search..." required>
@@ -63,6 +64,7 @@
                                 </button>
                             </form>
                         </li>
+                        
                         <li>
                             <a href="cart.php" class="cart-icon">
                                 <i class="fa fa-shopping-cart"></i>

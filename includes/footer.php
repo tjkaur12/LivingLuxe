@@ -37,6 +37,15 @@
                             <li>
                                 <a href="contact.php">Contact us</a>
                             </li>
+							<li>
+                                <a href="faq.php">FAQ's</a>
+                            </li>
+							<li>
+                                <a href="feedback.php">Feedback</a>
+                            </li>
+							<li>
+                                <a href="news_events.php">News and Events</a>
+                            </li>
 						</ul>
 					</div>
 					<div class="footer-col">

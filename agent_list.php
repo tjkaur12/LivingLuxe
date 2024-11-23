@@ -18,9 +18,31 @@ $agents = $result->fetch_all(MYSQLI_ASSOC);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agent List</title>
     <link rel="stylesheet" href="css/agent_styles.css">
+    <style>
+        /* Additional styles for the navigation */
+        .navigation-links {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .navigation-links a {
+            font-size: 16px;
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .navigation-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
+        <!-- Home Navigation Link -->
+        <div class="navigation-links">
+            <a href="index.php">Go to Home</a>
+        </div>
+
         <h1>Agents</h1>
         <ul class="agent-list">
             <?php if (!empty($agents)): ?>

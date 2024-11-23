@@ -55,8 +55,10 @@ if (isset($_GET['id'])) {
 
                     if ($imgResult->num_rows > 0) {
                         while ($img = $imgResult->fetch_assoc()) {
+                            // Construct the Firebase URL for the image
+                            $imageUrl = "https://firebasestorage.googleapis.com/v0/b/fir-groupapp3-f4c61.appspot.com/o/properties_images%2F" . urlencode($img['image_path']) . "?alt=media";
                             echo "<div class='slide fade'>
-                                    <img src='images/" . htmlspecialchars($img['image_path']) . "' alt='Property Image' style='width:100%'>
+                                    <img src='" . $imageUrl . "' alt='Property Image' style='width:100%'>
                                   </div>";
                         }
                     } else {

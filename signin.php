@@ -54,6 +54,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <p style="color: red;"><?php echo $error_message; ?></p>
                     <?php endif; ?>
                     <p>Don't have an account? <a href="signup.php">Register here</a></p>
+                    <p class="forgot-pass"><a href="forgot.php">Forgot Password</a></p>
+                    
                 </div>
                 <div class="login-img">
                     <img src="images/image2.jpg" alt=" image">

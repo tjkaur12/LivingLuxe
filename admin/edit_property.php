@@ -49,16 +49,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit Property</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
+<?php include 'admin-header.php'; ?>
 <body>
-    <div class="container">
+    <div class="wrapper">
         <h1>Edit Property</h1>
         <?php if ($message): ?>
             <div class="alert"><?php echo htmlspecialchars($message); ?></div>
@@ -96,5 +89,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <button type="submit">Update Property</button>
         </form>
     </div>
-</body>
-</html>
+<?php include 'admin-footer.php'; ?>

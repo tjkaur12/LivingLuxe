@@ -11,6 +11,7 @@
             </div>
         </div>
     </section>
+
     <section class="services full-wid">
     <div class="wrapper">
         <div class="services-inner">
@@ -20,14 +21,18 @@
             </div>
             <div class="ser_items">
                 <?php  
+                // Fetch the most recent 5 properties
                 $sql = "SELECT * FROM properties ORDER BY created_at DESC LIMIT 5";
                 $result = $conn->query($sql); 
                 if ($result->num_rows > 0) {
                     while ($row = $result->fetch_assoc()) { 
+                        // Construct the Firebase URL for the image
+                        $imageUrl = "https://firebasestorage.googleapis.com/v0/b/fir-groupapp3-f4c61.appspot.com/o/properties_images%2F" . urlencode($row['image']) . "?alt=media";
                 ?>
                 <div class="ser_item">
                     <div class="icon">
-                        <img src="images/<?php echo $row['image']; ?>" alt="Property Image">
+                        <!-- Display the image from Firebase Storage -->
+                        <img src="<?php echo $imageUrl; ?>" alt="Property Image">
                     </div>
                     <div class="ser_info">
                         <h2><a href="product-detail.php?id=<?php echo $row['id']; ?>"><?php echo $row['title']; ?></a></h2>
